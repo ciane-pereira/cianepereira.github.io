@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    vertical-align: baseline;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+:root {
+ /*cor padrão*/
+ --primary-color: #F0F0F0;
+
+ --primary-bg-color: #111217;
+ --secondary-bg-color: #28292E;
+ --primary-border-color: #28292E;
+   --secondary-border-color: #56575A;
+
+ --title-color: #F0F0F0;
+ --text-color: #9A9A9C;
+ --link-color: #9A9A9C;
+ --icon-color: #C7C8C9;
+}
+
+body {
+    background: var(--primary-bg-color);
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+i {
+    color: var(--icon-color);
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    /*z-index: 2;*/
+  }
+
+  .hearder__brand .hearder__logo {
+    width: 1.25rem; /*3.25*/
+    height: 1.25rem;
+  }
+  #toggleTheme {
+    font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: ease-in-out .4s;
+  }
+
+  /*** menu - style mobile e desktop ***/
+  .menu {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+  }
+  
+  .menu__item {
+    width: 100%;
+  }
+
+  /*** menu mobile embaixo como no celular ***/
+  .menu--mobile {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: solid 1px var(--primary-border-color);
+  }
+
+  .menu--mobile .menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .menu__link.active .menu__icon, 
+  .menu__link.active .menu__text {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  /***final menu mobile ****/
+  .menu__icon, .menu__text {
+    color: var(--text-color);
+  }
+
+  .menu__icon {
+    font-size: 1.5rem;
+  }
+  
+  .menu__text {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+
+  /*** menu emabaixo some qdo é desktop ****/
+  @media (min-whidth: 768px) {
+    .menu--mobile {
+        display: none;
+    }
+  }
