@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    vertical-align: baseline;
+    /*vertical-align: baseline;*/
 }
 
 a {
@@ -14,28 +14,77 @@ a {
     color: var(--text-color);
 }
 
-:root {
- /*cor padrão*/
- --primary-color: #F0F0F0;
-
- --primary-bg-color: #111217;
- --secondary-bg-color: #28292E;
- --primary-border-color: #28292E;
-   --secondary-border-color: #56575A;
-
- --title-color: #F0F0F0;
- --text-color: #9A9A9C;
- --link-color: #9A9A9C;
- --icon-color: #C7C8C9;
-}
-
-body {
-    background: var(--primary-bg-color);
-    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+a:hover {
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 i {
     color: var(--icon-color);
+}
+
+b {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    
+}
+
+h1, h2, h3 {
+    font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 200;
+}
+
+p {
+    font-size: 1.25rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/*** paleta de cores tema dark como padrão da página ***/
+:root, :root[data-theme='dark'] {
+ /*cor padrão*/
+ --primary-color: #F0F0F0;
+
+    --primary-bg-color: #111217;
+    --secondary-bg-color: #28292E;
+    --primary-border-color: #28292E;
+    --secondary-border-color: #56575A;
+
+    --title-color: #F0F0F0;
+    --text-color: #9A9A9C;
+    --link-color: #9A9A9C;
+    --icon-color: #C7C8C9;
+}
+
+/***  paleta de cores tema light ***/
+:root[data-theme='light'] {
+--primary-color: #0B0B0F;
+  
+      --primary-bg-color: #E9E9E9;
+      --secondary-bg-color: #C7C8C9;
+      --primary-border-color: #C7C8C9;
+    --secondary-border-color: #C7C8C9; /*#9A9A9C;*/
+  
+      --title-color: #0B0B0F;
+      --text-color: #28292E;
+      --link-color: #28292E;
+      --icon-color: #56575A;
+  }
+
+  /*** inverter a cor da logo para não desaparecer na cor do tema***/
+  html[data-theme='ligth'] .brand__logo {
+    filter: invert(1);
+  }
+
+body {
+    background: var(--primary-bg-color);
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header {
@@ -44,19 +93,33 @@ i {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    width: 100%;
+    width: 100%;    
     /*z-index: 2;*/
+    
   }
 
-  .hearder__brand .hearder__logo {
-    width: 1.25rem; /*3.25*/
-    height: 1.25rem;
+  /*** inclui ****/
+  .header__brand {
+    flex-grow: 1; /* Faz com que a logo ocupe o espaço disponível à esquerda */
   }
+
+  .header__toggle {
+    display: flex;
+
+    justify-content: end; 
+  }
+
+  .header__brand .brand__logo {
+    width: 3.5rem; /*3.25*/
+    height: 3.5rem;
+  }
+
+
   #toggleTheme {
     font-size: 1.5rem;
-  color: var(--primary-color);
-  cursor: pointer;
-  transition: ease-in-out .4s;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
   }
 
   /*** menu - style mobile e desktop ***/
@@ -88,7 +151,9 @@ i {
   }
 
   .menu__link.active .menu__icon, 
-  .menu__link.active .menu__text {
+  .menu__link.active .menu__text,
+  .menu__link:hover .menu__icon, 
+  .menu__link:hover .menu__text {
     color: var(--primary-color);
     font-weight: 600;
   }
@@ -107,9 +172,222 @@ i {
     text-transform: uppercase;
   }
 
-  /*** menu emabaixo some qdo é desktop ****/
-  @media (min-whidth: 768px) {
-    .menu--mobile {
+  /**** menu desktop ***/
+  .header__nav {
+    display: none;
+  }
+ 
+  .menu--principal {
+    gap: 1rem;
+  }
+
+  /**** main e seus elementos, estilizada depois de desktop e mobile ****/
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 1rem;
+  }
+
+   /*** na main estilizou aqui 2ª- início ****/
+   .main__content1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+   }
+
+   .main__content2 iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+   }
+
+    /*** na main estilizou aqui 2ª- fim ****/
+
+    /**** main finalizada 1 e 2, inseriu section entre as main 1 e 2, versão mobile ****/
+    .skills {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: flex-start;
+        gap: 1.25rem;
+        padding: 6.25rem 1rem 2rem 1rem;
+        background: var(--secondary-bg-color);
+        margin-top: -5.5rem;
+    }
+    
+    .skills h2 {
+        font-size: 2rem;
+        text-transform: none;  
+    }
+
+    .skills__list{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    .skills__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 4.8rem;
+        height: 4.8rem;
+        aspect-ratio: 1/1;
+        border: solid 1px var(--secondary-border-color);
+        border-radius: 50rem;
+    }
+
+    .skills__logo {
+        width: 2.4rem;
+    }
+
+  /*** na main estilizou aqui 1ª- início ****/
+  .menu--social {
+    gap: 1rem;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 3.5rem; /*3.125*/ 
+    padding: 0.875rem 1.5rem;
+    transition: ease-in-out .3s; 
+    cursor: pointer;  
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+    transition: ease-in-out .3s;
+  }
+
+  .btn span, .btn i {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  .btn--primary span {
+    color: var(--primary-color);
+  }
+
+  .btn--primary {
+    border: solid 2px var(--primary-color);/*1px*/
+  }
+ /*** na main estilizou aqui 1ª- fim ****/
+
+  /**** footer ****/
+  footer {
+    margin-bottom: 5rem;
+  }
+  
+  footer p {
+    font-size: 0.875rem;
+    padding: 1rem;
+    text-align: center;    
+  }
+
+  /*** media query ****/
+  /*** menu embaixo some, a partir de 768px e fica desktop ****/
+  @media (min-width: 768px) {
+    .header {
+        position: fixed;
+        border-bottom: solid 1px var(--primary-border-color);
+        padding: 1rem 6rem;
+        background: var(--primary-bg-color);
+    }
+    .nav--mobile {
         display: none;
+    }
+
+    .header__nav {
+        display: flex;
+    }
+
+    .header__nav,
+    .header__toggle {
+        min-width: 30%;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    main {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .main__content1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;        
+    }
+
+    .skills {
+        padding: 6.25rem 1rem 2rem 1rem;
+        margin-top: -6rem;
+    }
+
+    footer {
+        margin: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    main {
+        padding: 12rem 6rem 2rem;
+    }
+    .main__content1 .btn {
+        width: auto;
+    }
+
+    .skills {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10rem 6rem 4rem;
+    }
+
+    .skills h2 {
+        font-size: 3.5rem;
+        width: 60%;        
+    }
+
+    .skills__list {
+        gap: 1rem;
+    }
+
+    .skills__item {
+        width: 6rem;
+        height: 6rem;
+        
+    }
+
+    .skills__logo {
+        width: 3rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    h1 {
+        font-size: 6.25rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+    .header {
+        padding: 0.5rem 5rem; /*1rem 15rem*/
+    }
+
+    main {
+        padding: 12rem 15rem 2rem;
+    }
+
+    .skills {    
+        padding: 10rem 15rem 4rem;
     }
   }
