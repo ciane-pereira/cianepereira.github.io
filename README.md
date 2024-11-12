@@ -7,7 +7,6 @@ Este é o código-fonte do meu portfólio pessoal, desenvolvido para compartilha
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Estrutura de Arquivos](#estrutura-de-arquivos)
-- [Como Executar o Projeto](#como-executar-o-projeto)
 - [Contato](#contato)
 
 ## Sobre o Projeto
@@ -41,3 +40,10 @@ Este portfólio é uma aplicação web que inclui temas claros e escuros e é to
 │       └── scripts.js # Script para alternância de tema e interações
 ├── index.html # Estrutura principal do portfólio
 └── README.md # Documentação do projeto
+```
+
+## Contato
+Para saber mais sobre meu trabalho ou entrar em contato, acesse as seguintes redes sociais:
+- [LinkedIn](https://br.linkedin.com/in/ciane-pereira)
+- [GitHub](https://github.com/ciane-pereira)
+- [E-mail](mailto:cianepereira@gmail.com)
