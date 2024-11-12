@@ -1,34 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciane Pereira | Portfolio</title>
-    <meta name="description" content="Portfólio da Desenvolvedora Front-End Ciane Pereira- para compartilhar projetos e habilidades de Desenvolvimento Web.">
+    <meta name="description" content="Desenvolvedora Front-End Portfólio- para compartilhar meus projetos e habilidades de Desenvolvimento Web.">
+    <meta name="author" content="Ciane Pereira">
 
-    <link rel="stylesheet" href="assets/style/style.css"> 
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/scripts.js" defer></script> 
 
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo_light.png" type="image/x-icon">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
+    <!--  menu desktop -->
     <header class="header">
-        <div class="hearder__brand">
-            <img class="brand__logo" src="assets/images/logo.PNG" alt="logo Ciane" width="80">
-        </div>        
-        <i id="toggleTheme" class="bi bi-brightness-high"></i>      
+        <div class="header__brand">
+            <a href="#home">
+                <img id="logo" class="brand__logo" src="assets/images/logo_dark.png" alt="logo Ciane Pereira">
+                <span id="brand__name">Ciane Pereira</span> 
+            </a>                     
+        </div> 
+
+    <nav class="header__nav">        
+        <ul class="menu menu--principal">
+            <li class="menu__item">
+                <a class="menu__link active" href="#">                
+                <span class="menu__text">Home</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#projetos">               
+                <span class="menu__text">Projetos</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#sobre">               
+                <span class="menu__text">Sobre</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#contato">               
+                <span class="menu__text">Contato</span>
+                </a>
+            </li>
+        </ul>
+    </nav>       
+        <div class="header__toggle">
+            <i id="toggleTheme" class="bi bi-brightness-high"></i>  
+        </div>            
     </header>
-    <nav>
+    
+        <!--  menu mobile icons -->        
+    <nav class="nav--mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item">
-                <a class="menu__link active" href="#home">
+                <a class="menu__link active" href="#">
                 <i class="menu__icon bi bi-house-door"></i>
                 <span class="menu__text">Home</span>
                 </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="#projeto">
+                <a class="menu__link" href="#projetos">
                 <i class="menu__icon bi bi-window"></i>
                 <span class="menu__text">Projeto</span>
                 </a>
@@ -47,6 +82,224 @@
             </li>
         </ul>
     </nav>
-    <h1>Ciane Pereira</h1>
+    <main>
+        <div class="main__content1">
+            <h1>Transforme seu <b>negócio</b> em <b>site</b> e se <b>Destaque no Mundo Digital</b></h1>
+            <p>Desenvolvedora Front-End</p>
+            <ul class="menu menu--social">                
+                <li>
+                    <a class="menu__link" href="https://br.linkedin.com/in/ciane-pereira">
+                        <i class="menu__icon bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="https://github.com/ciane-pereira">
+                        <i class="menu__icon bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                  <a class="menu__link" href="https://wa.me/5531994842942" target="_blank">
+                    <i class="menu__icon bi bi-whatsapp"></i>
+                  </a>
+                </li>
+            </ul>
+           <a href="#projetos">
+           <button class="btn btn--primary">
+            <span>Ver Projetos</span>
+            <i class="bi bi-box-arrow-down-right"></i>
+           </button>
+           </a>
+        </div>
+        
+    </main> 
+    
+    
+    <section id="projetos" class="projects">
+        <h2>Projetos</h2>
+        <div class="projects__container">
+            <div class="projects__card">
+                <img class="card__cover" src="assets/images/projects/portfolio.png" alt="card da imagem do meu portfolio">
+                <div class="card__body">
+                    <h3 class="card__title">Oferta de Serviços</h3>
+                    <p class="card__description">Portfólio de Apresentação do Meu Trabalho</p>
+                    <ul class="card__list">
+                        <li class="card__item">Projeto com tema dark e light</li>
+                        <li class="card__item">Card de projetos</li>
+                        <li class="card__item">Contatos para conectarmos</li>
+                      </ul>
+                      <ul class="technologies__list">
+                        <li class="technologies__item">
+                            <img src="assets/images/technologies/html3.jpg" alt="logomarca html" class="technologies__logo">
+                        </li>
+                        <li class="technologies__item">
+                            <img src="assets/images/technologies/css2_1.png" alt="logomarca CSS" class="technologies__logo">
+                        </li>
+                        <li class="technologies__item">
+                            <img src="assets/images/technologies/js.png" alt="logomarca JavaScript" class="technologies__logo">
+                        </li>
+                        <li class="technologies__item">
+                            <img src="assets/images/technologies/bootstrap5.jpg" alt="logomarca bootstrap" class="technologies__logo">
+                        </li>
+                    </ul>
+                      <div class="card__buttons">
+                        <a href="https://github.com/ciane-pereira/cianepereira.github.io">
+                          <button class="btn btn--primary">
+                            <span>Prévia</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                          </button> 
+                        </a>
+                        <a href="https://github.com/ciane-pereira/cianepereira.github.io">
+                          <button class="btn">
+                            <span>Repositório</span>
+                          </button> 
+                        </a> 
+                        
+                </div>                
+            </div>
+        </div>
+
+        <div class="projects__card card--reverse">
+            <img class="card__cover" src="assets/images/projects/rede.jpg" alt="">
+            <div class="card__body">
+                <h3 class="card__title">Projeto Colaborativo</h3>
+                <p class="card__description">Desenvolvido em equipe para conclusão de curso</p>
+                <ul class="card__list">
+                    <li class="card__item">Lista dos parceiros e classificação</li>
+                    <li class="card__item">Cadastro de instituição e de doadores de alimentos</li>
+                    <li class="card__item">Cadastro de alimentos e local de coleta</li>
+                  </ul>
+                  <ul class="technologies__list">
+                    <li class="technologies__item">
+                        <img src="assets/images/technologies/html3.jpg" alt="logomarca html" class="technologies__logo">
+                    </li>
+                    <li class="technologies__item">
+                        <img src="assets/images/technologies/css2_1.png" alt="logomarca css" class="technologies__logo">
+                    </li>
+                    <li class="technologies__item">
+                        <img src="assets/images/technologies/js.png" alt="logomarca javaScript" class="technologies__logo">
+                    </li>
+                    <li class="technologies__item">
+                        <img src="assets/images/technologies/sql_lite.png" alt="" class="technologies__logo">
+                    </li>
+                </ul>
+                <div class="card__buttons">
+                <a href="https://github.com/tvinente/rede-alimenta">
+                  <button class="btn btn--primary">
+                    <span>Prévia</span>
+                    <i class="bi bi-box-arrow-up-right"></i>
+                  </button> 
+                </a>
+                <a href="https://github.com/tvinente/rede-alimenta/graphs/contributors">
+                  <button class="btn">
+                    <span>Repositório</span>
+                  </button> 
+                </a> 
+                
+        </div>                
+        </div>
+    </div>    
+<a href="https://github.com/ciane-pereira">
+    <button class="btn btn--primary">
+      <span>Ver Todos os Projetos</span>
+      <i class="bi bi-box-arrow-up-right"></i>
+    </button>  
+  </a>
+</div>
+    </section>
+
+    <section class="technologies">
+      <h2>Conhecimento nas principais tecnologias do mercado</h2>
+      <ul class="technologies__list">
+          <li class="technologies__item">
+              <img src="assets/images/technologies/html3.jpg" alt="imagem logo html" class="technologies__logo">
+          </li>
+          <li class="technologies__item">
+              <img src="assets/images/technologies/css2_1.png" alt="imagem logo css" class="technologies__logo">
+          </li>
+          <li class="technologies__item">
+              <img src="assets/images/technologies/js.png" alt="imagem logo javascript" class="technologies__logo">
+          </li>
+          <li class="technologies__item">
+              <img src="assets/images/technologies/ts.png" alt="imagem logo typescript" class="technologies__logo">
+          </li>
+          <li class="technologies__item">
+            <img src="assets/images/technologies/react.png" alt="imagem logo react" class="technologies__logo">
+        </li>
+        <li class="technologies__item">
+          <img src="assets/images/technologies/angular.png" alt="imagem logo angular" class="technologies__logo">
+      </li>
+      <li class="technologies__item">
+        <img src="assets/images/technologies/nodejs.png" alt="imagem logo nodejs" class="technologies__logo">
+    </li>
+      </ul>
+  </section> 
+
+    <section id="sobre" class="about">
+        <div class="about__content1">
+          <img class="about__photo" src="assets/images/cianepereira1.jpg" alt="">
+          <div class="about__description">
+            <h2>Sobre mim</h2>
+            <p id="contact-text">
+                Olá! Sou Ciane Pereira. Desenvolvedora Front-End, apaixonada por criar sites que impressionam 
+                visualmente e oferecem uma experiência de usuário excepcional! 
+                Com experiência no desenvolvimento de interfaces visuais, meu objetivo é que seu site  seja 
+                acessível em todos os dispositivos móveis e web.
+                E principalmene reflita a identidade do seu negócio, capture e fortaleça a essência da sua marca e 
+                gera conexão com os clientes.                
+                Atualmente curso Análise e Desenvolvimento de Sistemas e atuo como desenvolvedora 
+                freelancer.               
+            </p>  
+            <div class="about__icons">
+              <i class="bi bi-translate"></i>
+            </div>
+            <div class="description__buttons">
+            <a href="https://drive.google.com/file/d/13v3JUa5U8RanYAiTIfZvIUvUQQQZbf15/view?usp=sharing">
+              <button class="btn btn--primary">
+                <span>Baixar Currículo</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>     
+      </section>
+
+      <section id="contato" class="contact">
+        <h2>Contate-me</h2>
+        <p id="contact-text">Estou disponível para novas conexões e para transformar sua presença online.
+          Vamos criar algo incrível juntos!
+            Contate-me e conecte-se comigo através das redes sociais.
+        </p>
+        <ul class="menu menu--social">
+          <li>
+            <a class="menu__link" href="https://github.com/ciane-pereira" target="_blank">
+              <i class="menu__icon bi bi-github"></i>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu__link" href="https://br.linkedin.com/in/ciane-pereira" target="_blank">
+              <i class="menu__icon bi bi-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu__link" href="https://wa.me/5531994842942" target="_blank">
+              <i class="menu__icon bi bi-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+          </li>
+        </ul>
+        <a href="mailto:cianepereira@gmail.com">
+          <button class="btn btn--primary">
+            <span class="email">cianepereira@gmail.com</span>
+          </button>  
+        </a>
+      </section>
+    <footer>
+        <p>
+          © 2024. Todos os Direitos Reservados.
+          Desenvolvido por <a href="https://br.linkedin.com/in/ciane-pereira" target="_blank">Ciane Pereira</a>
+        </p>
+      </footer>
 </body>
 </html>

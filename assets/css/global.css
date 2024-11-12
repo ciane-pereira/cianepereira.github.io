@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root, :root[data-theme='dark'] {
+    --primary-color: #F0F0F0;
+   
+       --primary-bg-color: #130920;
+       --secondary-bg-color: #2A2136;
+       --primary-border-color: #2A2136;
+       --secondary-border-color: #423A4C;
+   
+       --title-color: #F0F0F0;
+       --text-color: #9A9A9C;
+       --link-color: #9A9A9C;
+       --icon-color: #C7C8C9;
+   }
+   
+   :root[data-theme='light'] {
+   --primary-color: #0B0B0F;
+     
+         --primary-bg-color: #E9E9E9;
+         --secondary-bg-color: #C7C8C9;
+         --primary-border-color: #C7C8C9;
+       --secondary-border-color: #9A9A9C;
+     
+         --title-color: #0B0B0F;
+         --text-color: #2A2136;
+         --link-color: #2A2136;
+         --icon-color: #423A4C;
+     }
+   
+     html[data-theme='ligth'] .brand__logo {
+       filter: invert(1);
+     }
+   
+     html[data-theme='light'] .technologies__logo {
+       filter: invert(0%);/*80%*/
+     }
+   
+   body {
+       background: var(--primary-bg-color);
+       font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+       color: var(--text-color);
+   }
+
+   ::-webkit-scrollbar {
+     width: 0.5rem;
+   }
+   
+   ::-webkit-scrollbar-track {
+     background-color: transparent;
+   }
+   
+   ::-webkit-scrollbar-thumb {
+     background: var(--secondary-bg-color);
+     border-radius: 50rem;
+   }
+
+   
