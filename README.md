@@ -26,7 +26,6 @@ Este portfólio é uma aplicação web que inclui temas claros e escuros e é to
 
 ## Tecnologias Utilizadas
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" width="40"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="40"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40"> <img src="assets/images/technologies/bootstrap5.jpg" width="40" height="40">
-- **Outras tecnologias**: TypeScript, React, Angular, Node.js
 
 ## Estrutura de Arquivos
 ```plaintext
