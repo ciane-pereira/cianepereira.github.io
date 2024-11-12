@@ -25,11 +25,12 @@ Este portfólio é uma aplicação web que inclui temas claros e escuros e é to
 - Formulário de contato com link para WhatsApp e e-mail.
 
 ## Tecnologias Utilizadas
-- **HTML5** ![HTML](assets/images/technologies/html3.jpg)
-- **CSS3** ![CSS](assets/images/technologies/css2_1.png)
-- **JavaScript** ![JavaScript](assets/images/technologies/js.png)
-- **Bootstrap** ![Bootstrap](assets/images/technologies/bootstrap5.jpg)
+- **HTML5** <img src="assets/images/technologies/html3.jpg" width="50px" height="50px">
+- **CSS3** <img src="assets/images/technologies/css2_1.png" width="50px" height="50px">
+- **JavaScript** <img src="assets/images/technologies/js.png" width="50px" height="50px">
+- **Bootstrap** <img src="assets/images/technologies/bootstrap5.jpg" width="50px" height="50px">
 - **Outras tecnologias**: TypeScript, React, Angular, Node.js
+
 
 ## Estrutura de Arquivos
 ```plaintext
