@@ -294,12 +294,12 @@ p, span, li {
   }
 
     .card__body .technologies__item {
-      width: 4rem;
-      height: 4rem;
+      width: 5rem;
+      height: 5rem;
     }
 
     .card__body .technologies__logo {
-      height: 2rem;
+      height: 3.3rem;
     }
 
     .projects .btn {
@@ -324,7 +324,7 @@ p, span, li {
     
     .about__photo {
       width: 100%;
-      object-fit: cover;
+      object-fit:cover;
       object-position: center;
       pointer-events: none;
       border-radius: 50rem;
@@ -389,6 +389,7 @@ p, span, li {
 
 #contact-text {
   text-transform: inherit;
+  text-align: left;
 } 
 
 .menu--social {
